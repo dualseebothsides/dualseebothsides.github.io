@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Poll</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="site">
+        <nav class="sidebar hoverable close">
+            <div class="logo_items flex">
+
+                <i id="lock-icon" title="Unlock Sidebar"></i>
+                <i class="bx bx-x" id="sidebar-close"></i>
+            </div>
+
+            <div class="menu_container">
+                <div class="menu_items">
+                    <ul class="menu_item">
+                        <div class="menu_title flex">
+                            <span class="title">Browse</span>
+                            <span class="line"></span>
+                        </div>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-compass"></i>
+                                <span>Explore</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="menu_item">
+                        <div class="menu_title flex">
+                            <span class="title">Create</span>
+                            <span class="line"></span>
+                        </div>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-hourglass-end"></i>
+                                <span>Flare</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-images"></i>
+                                <span>Photo</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-film"></i>
+                                <span>Video</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-square-poll-vertical"></i>
+                                <span>Poll</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-message"></i>
+                                <span>Thought</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="menu_item">
+                        <div class="menu_title flex">
+                            <span class="title">Info</span>
+                            <span class="line"></span>
+                        </div>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-bell"></i>
+                                <span>Notifications</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <img src="Screenshot 2020-11-01 172631.png" style="width:30px; height:30px; object-fit:cover; border-radius:50%; box-shadow:#101010 0px 0px 5px; margin-left:12px; margin-right:15px;" />
+                                <span>My Profile</span>
+                                <i class="fa-solid fa-bell" style="color:transparent"></i>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="link flex">
+                                <i class="fa-solid fa-gear"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li class="item" style="font-size:10px; margin-bottom:50px; margin-top:100px; margin-left:15px;">
+                            <a href="#">Privacy Policy </a>
+                            <br />
+                            <br />
+                            <a href="#">Community Guidelines</a>
+                            <br />
+                            <br />
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="fa-solid" style="color:transparent"><img src="Screenshot 2020-11-01 172631.png" style="width:30px; height:30px; object-fit:cover; border-radius:50%; box-shadow:#101010 0px 0px 5px; display:initial" /></i>
+                </div>
+            </div>
+        </nav>
+        <div class="post" style="margin-top:100px;">
+            <div class="accountinfo">
+                <img src="Screenshot 2020-11-01 172631.png" style="float:left; height:55px; width:55px; border-radius:50%; margin-right:10px;" />
+                <div>
+                    <h3 style="line-height:1.2; margin-top:5px;">Gravity Creative</h3>
+                    <p style="line-height:1.2">@gravity</p>
+                    <br />
+                </div>
+            </div>
+            <div class="textwrapper">
+                <h1 style="max-width:1000px;">Anything can really be a UFO if you're bad enough at identifying things.</h1>
+                <br />
+            </div>
+            <div class="wrapper">
+                <header>Poll</header>
+                <div class="poll-area">
+                    <input type="checkbox" name="poll" id="opt-1">
+                    <input type="checkbox" name="poll" id="opt-2">
+                    <input type="checkbox" name="poll" id="opt-3">
+                    <input type="checkbox" name="poll" id="opt-4">
+                    <label for="opt-1" class="opt-1">
+                        <div class="row">
+                            <div class="column">
+                                <span class="circle"></span>
+                                <span class="text">HTML</span>
+                            </div>
+                            <span class="percent">30%</span>
+                        </div>
+                        <div class="progress" style='--w:30;'></div>
+                    </label>
+                    <label for="opt-2" class="opt-2">
+                        <div class="row">
+                            <div class="column">
+                                <span class="circle"></span>
+                                <span class="text">Java</span>
+                            </div>
+                            <span class="percent">20%</span>
+                        </div>
+                        <div class="progress" style='--w:20;'></div>
+                    </label>
+                    <label for="opt-3" class="opt-3">
+                        <div class="row">
+                            <div class="column">
+                                <span class="circle"></span>
+                                <span class="text">Python</span>
+                            </div>
+                            <span class="percent">40%</span>
+                        </div>
+                        <div class="progress" style='--w:40;'></div>
+                    </label>
+                    <label for="opt-4" class="opt-4">
+                        <div class="row">
+                            <div class="column">
+                                <span class="circle"></span>
+                                <span class="text">jQuery</span>
+                            </div>
+                            <span class="percent">10%</span>
+                        </div>
+                        <div class="progress" style='--w:10;'></div>
+                    </label>
+                </div>
+            </div>
+            <div class="buttonoptions">
+                <br />
+                <i class="fa-regular fa-share-from-square share" style="font-size:20px; margin-right:20px; cursor:pointer"></i>
+                <i class="fa-solid fa-arrows-rotate retake" style="font-size:20px; margin-right:20px; cursor:pointer"></i>
+                <i class="fa-regular fa-heart heart" style="font-size: 20px; margin-right: 20px; cursor: pointer"></i>
+                <i class="fa-regular fa-comment comment" style="font-size:20px; cursor: pointer;"></i>
+            </div>
+        </div>
+        <div class="post" style="margin-top:100px;">
+            <div class="accountinfo">
+                <img src="ScreenCapture.png" style="float:left; height:55px; width:55px; border-radius:50%; margin-right:10px;" />
+                <div>
+                    <h3 style="line-height:1.2; margin-top:5px;">Tortle</h3>
+                    <p style="line-height:1.2">@PotatoCatInMyDoorknobs</p>
+                    <br />
+                </div>
+            </div>
+            <div class="textwrapper">
+                <h1 style="max-width:1000px;">42 Walmart doornkobs in my eyeballsa about to swallow and i think that we have dementia what if you add a read more ahbjj re<span id="dots">...</span> <span id="extra" style="display:none;">i think we really need to add a new button for super long posts like this so that we dont make people read so much stuff without being able to scroll past it but really we shouldnt</span><a id="readmorebutton" onclick="readmore();" style="color:#D49A89; font-size:20px; cursor:pointer; margin-left:20px;">READ MORE</a></h1>
+                <br />
+            </div>
+            <div class="buttonoptions">
+                <br />
+                <i class="fa-regular fa-share-from-square share" style="font-size:20px; margin-right:20px; cursor:pointer"></i>
+                <i class="fa-solid fa-arrows-rotate retake" style="font-size:20px; margin-right:20px; cursor:pointer"></i>
+                <i class="fa-regular fa-heart heart" style="font-size: 20px; margin-right: 20px; cursor: pointer"></i>
+                <i class="fa-regular fa-comment comment" style="font-size:20px; cursor: pointer;"></i>
+            </div>
+        </div>
+        <div class="post" style="margin-top:100px;">
+            <div class="accountinfo">
+                <img src="ScreenCapture.png" style="float:left; height:55px; width:55px; border-radius:50%; margin-right:10px;" />
+                <div>
+                    <h3 style="line-height:1.2; margin-top:5px;">Tortle</h3>
+                    <p style="line-height:1.2">@PotatoCatInMyDoorknobs</p>
+                    <br />
+                </div>
+            </div>
+            <div class="textwrapper">
+                <img src="https://yt3.ggpht.com/K4dMf7Dyw8oZCh431fK5nIyXpBwXj-QcjWaxI0hhQx0YEtwK2mH37rz7EgB7UW8lFSNHHXOmx2Q=s88-c-k-c0x00ffffff-no-rj" style="width:400px; height:400px; border-radius:20px; object-fit:cover;" />
+                <h1 style="max-width:1000px;">Tgag</h1>
+                <br />
+            </div>
+            <div class="buttonoptions">
+                <br />
+                <i class="fa-regular fa-share-from-square share" style="font-size:20px; margin-right:20px; cursor:pointer"></i>
+                <i class="fa-solid fa-arrows-rotate retake" style="font-size:20px; margin-right:20px; cursor:pointer"></i>
+                <i class="fa-regular fa-heart heart" style="font-size: 20px; margin-right: 20px; cursor: pointer"></i>
+                <i class="fa-regular fa-comment comment" style="font-size:20px; cursor: pointer;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="mobilesite">
+        <img src="Dualapp.png" style="width:100%"/>
+        <h1 style="text-align: center; padding:40px;">DUAL ISN'T YET AVAILABLE FOR SMALL DISPLAYS.</h1>
+        <p style="text-align: center;">You can <a href="/reserve">reserve your username</a> for when Dual is ready.</p>
+    </div>
+    <script>
+        //add post index to see which one to read more less
+        function readmore() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("extra");
+            var button = document.getElementById("readmorebutton");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                button.innerHTML = "READ MORE";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                button.innerHTML = "READ LESS";
+                moreText.style.display = "inline";
+            }
+        }
+
+        const options = document.querySelectorAll("label");
+        for (let i = 0; i < options.length; i++) {
+            options[i].addEventListener("click", () => {
+                for (let j = 0; j < options.length; j++) {
+                    if (options[j].classList.contains("selected")) {
+                        options[j].classList.remove("selected");
+                    }
+                }
+
+                options[i].classList.add("selected");
+                for (let k = 0; k < options.length; k++) {
+                    options[k].classList.add("selectall");
+                }
+
+                let forVal = options[i].getAttribute("for");
+                let selectInput = document.querySelector("#" + forVal);
+                let getAtt = selectInput.getAttribute("type");
+                if (getAtt == "checkbox") {
+                    selectInput.setAttribute("type", "radio");
+                } else if (selectInput.checked == true) {
+                    options[i].classList.remove("selected");
+                    selectInput.setAttribute("type", "checkbox");
+                }
+
+                let array = [];
+                for (let l = 0; l < options.length; l++) {
+                    if (options[l].classList.contains("selected")) {
+                        array.push(l);
+                    }
+                }
+                if (array.length == 0) {
+                    for (let m = 0; m < options.length; m++) {
+                        options[m].removeAttribute("class");
+                    }
+                }
+            });
+        }
+
+        const heart = document.querySelector(".heart");
+        heart.addEventListener("click", (e) => {
+            let xValue = e.clientX - e.target.offsetLeft,
+                yValue = e.clientY - e.target.offsetTop;
+            heart.style.left = `${xValue}px`;
+            heart.style.top = `${yValue}px`;
+            heart.classList.add("active");
+            setTimeout(() => {
+                heart.classList.remove("active");
+            }, 1000);
+        });
+
+        const retake = document.querySelector(".retake");
+        retake.addEventListener("click", (e) => {
+            let xValue = e.clientX - e.target.offsetLeft,
+                yValue = e.clientY - e.target.offsetTop;
+            retake.style.left = `${xValue}px`;
+            retake.style.top = `${yValue}px`;
+            retake.classList.add("active");
+            setTimeout(() => {
+                retake.classList.remove("active");
+            }, 1000);
+        });
+
+        const share = document.querySelector(".share");
+        share.addEventListener("click", (e) => {
+            let xValue = e.clientX - e.target.offsetLeft,
+                yValue = e.clientY - e.target.offsetTop;
+            share.style.left = `${xValue}px`;
+            share.style.top = `${yValue}px`;
+            share.classList.add("active");
+            setTimeout(() => {
+                share.classList.remove("active");
+            }, 1000);
+        });
+
+        const comment = document.querySelector(".comment");
+        comment.addEventListener("click", (e) => {
+            let xValue = e.clientX - e.target.offsetLeft,
+                yValue = e.clientY - e.target.offsetTop;
+            comment.style.left = `${xValue}px`;
+            comment.style.top = `${yValue}px`;
+            comment.classList.add("active");
+            setTimeout(() => {
+                comment.classList.remove("active");
+            }, 1000);
+        });
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #000000;
+        }
+
+
+        .mobile-bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            will-change: transform;
+            transform: translateZ(0);
+            display: flex;
+            height: 50px;
+            box-shadow: 0 -2px 5px -2px #333;
+            background: rgba(5, 5, 5, 0.74);
+            border-radius: 16px 16px 0px 0px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(7.5px);
+            -webkit-backdrop-filter: blur(7.5px);
+            border: 1px solid rgba(5, 5, 5, 0.3);
+        }
+
+        .mobile-bottom-nav__item {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .mobile-bottom-nav__item-content .fa-solid{
+            font-size:25px;
+        }
+
+
+        .mobile-bottom-nav__item-content {
+            display: flex;
+            flex-direction: column;
+            margin-bottom:10px;
+            margin-top:10px;
+        }
+
+        .heart.active {
+            animation: heart 0.7s linear forwards;
+        }
+
+        @media only screen and (max-width: 1300px) {
+           .sidebar{
+               display:none;
+           }
+            .mobile-bottom-nav {
+                display: flex;
+            }
+            .mobilesite {
+                display: none;
+            }
+
+            .site {
+                display: initial;
+            }
+            .post {
+                margin-left: 20px;
+                margin-right:20px;
+            }
+            .post:last-of-type{
+                margin-bottom:100px;
+            }
+            .wrapper {
+                max-width: 60%;
+            }
+        }
+
+        @media only screen and (min-width: 1300px) {
+            .sidebar {
+                display: initial;
+            }
+            .mobile-bottom-nav {
+                display: none;
+            }
+            .mobilesite{
+                display:none;
+            }
+            .site{
+                display:initial;
+            }
+            .post {
+                margin-left: -100px;
+            }
+            .post:last-of-type {
+                margin-bottom: 50px;
+            }
+            .wrapper {
+                max-width: 800px;
+            }
+        }
+
+        @keyframes heart {
+            0% {
+                font-size: 20px;
+                opacity: 1;
+                color: #ffffff;
+            }
+            10% {
+                transform:scale(1.2);
+                opacity: 1;
+                color: #525be7;
+            }
+            40% {
+                transform: scale(1.6);
+                opacity: 1;
+                color: #525be7;
+            }
+            60% {
+                transform: scale(1);
+                opacity: 1;
+                color: #525be7;
+            }
+        }
+
+        .share.active {
+            animation: share 0.5s linear forwards;
+        }
+
+        @keyframes share {
+            0% {
+                font-size: 20px;
+                opacity: 1;
+                color: #ffffff;
+            }
+
+            40% {
+                transform: rotate(10deg);
+                opacity: 1;
+                color: #D49A89;
+            }
+
+            60% {
+                transform: rotate(0deg);
+                opacity: 1;
+                color: #D49A89;
+            }
+        }
+
+        .retake.active {
+            animation: retake 0.7s linear forwards;
+        }
+
+        @keyframes retake {
+            0% {
+                font-size: 20px;
+                opacity: 1;
+                color: #ffffff;
+            }
+
+            40% {
+                transform: rotate(-10deg);
+                opacity: 1;
+                color: #D49A89;
+            }
+
+            60% {
+                transform: rotate(180deg);
+                opacity: 1;
+                color: #D49A89;
+            }
+        }
+        .comment.active {
+            animation: comment 0.4s linear forwards;
+        }
+
+        @keyframes comment {
+            0% {
+                font-size: 20px;
+                opacity: 1;
+                color: #ffffff;
+            }
+
+            40% {
+                transform: scale(1.2);
+                opacity: 1;
+                color: #D49A89;
+            }
+        }
+
+        .wrapper {
+            background: #050505;
+            border-radius: 15px;
+            padding: 25px;
+            width: 100%;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        }
+
+            .wrapper header {
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            .wrapper .poll-area {
+                margin: 20px 0 15px 0;
+            }
+
+        .poll-area label {
+            display: block;
+            margin-bottom: 4px;
+            border-radius: 10px;
+            padding: 8px 15px;
+            border: 2px solid #202020;
+            transition: all 0.2s ease;
+        }
+
+            .poll-area label:first-of-type {
+                border-radius: 17px 17px 10px 10px;
+            }
+
+            .poll-area label:last-child {
+                border-radius: 10px 10px 17px 17px;
+            }
+
+            .poll-area label:hover {
+                border-color: #404040;
+            }
+
+        label.selected {
+            border-color: #202020 !important;
+            transition: all 0.5s;
+        }
+
+        label .row {
+            display: flex;
+            pointer-events: none;
+            justify-content: space-between;
+        }
+
+            label .row .column {
+                display: flex;
+                align-items: center;
+            }
+
+            label .row .circle {
+                height: 19px;
+                width: 19px;
+                display: block;
+                border: 2px solid #202020;
+                border-radius: 50%;
+                margin-right: 10px;
+                position: relative;
+            }
+
+        label.selected .row .circle {
+            border-color: #525be7;
+            transition: all 0.5s;
+        }
+
+        label .row .circle::after {
+            content: "";
+            height: 11px;
+            width: 11px;
+            background: #525be7;
+            border-radius: inherit;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            display: none;
+        }
+
+        .poll-area label:hover .row .circle::after {
+            display: block;
+            background: #e6e6e6;
+        }
+
+        label.selected .row .circle::after {
+            display: block;
+            transition: all 0.5s;
+            background: #525be7 !important;
+        }
+
+        label .row span {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        label .row .percent {
+            display: none;
+            color: #303030;
+        }
+
+        label .progress {
+            height: 7px;
+            width: 100%;
+            position: relative;
+            background: #303030;
+            margin: 8px 0 3px 0;
+            border-radius: 30px;
+            display: none;
+            pointer-events: none;
+        }
+
+
+            label .progress:after {
+                position: absolute;
+                content: "";
+                height: 100%;
+                background: #D49A89;
+                width: calc(1% * var(--w));
+                border-radius: inherit;
+                transition: all 0.2s ease;
+            }
+
+        label.selected .progress::after {
+            background: #525be7;
+            transition: all 0.5s;
+        }
+
+        label.selectall .progress,
+        label.selectall .row .percent {
+            display: block;
+            transition: all 0.5s;
+            animation: ease-in 0.5s;
+        }
+
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: none;
+        }
+    </style>
+
+</body>
+</html>
