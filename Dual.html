@@ -11,6 +11,9 @@
 </head>
 <body>
     <div class="site">
+        <div class="backtotop" style="width:150px; height:40px; border-radius:20px; background-color:#D49A89; text-align:center; position:fixed; top:15px; padding-top:7px; opacity:0; box-shadow: #000000 0px 0px 10px;" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+            <p><i class="fa-solid fa-arrow-up"></i> Scroll to top</p>
+        </div>
         <nav class="sidebar hoverable close">
             <div class="logo_items flex">
 
@@ -249,6 +252,28 @@
                 <i class="fa-regular fa-comment comment" style="font-size:20px; cursor: pointer;"></i>
             </div>
         </div>
+        <div class="post" style="margin-top:100px;">
+            <div class="accountinfo">
+                <img src="ScreenCapture.png" style="float:left; height:55px; width:55px; border-radius:50%; margin-right:10px;" />
+                <div>
+                    <h3 style="line-height:1.2; margin-top:5px;">Tortle</h3>
+                    <p style="line-height:1.2">@PotatoCatInMyDoorknobs</p>
+                    <br />
+                </div>
+            </div>
+            <div class="textwrapper">
+                <img src="https://yt3.ggpht.com/K4dMf7Dyw8oZCh431fK5nIyXpBwXj-QcjWaxI0hhQx0YEtwK2mH37rz7EgB7UW8lFSNHHXOmx2Q=s88-c-k-c0x00ffffff-no-rj" style="width:400px; height:400px; border-radius:20px; object-fit:cover;" />
+                <h1 style="max-width:1000px;">Tgag</h1>
+                <br />
+            </div>
+            <div class="buttonoptions">
+                <br />
+                <i class="fa-regular fa-share-from-square share" style="font-size:20px; margin-right:20px; cursor:pointer"></i>
+                <i class="fa-solid fa-arrows-rotate retake" style="font-size:20px; margin-right:20px; cursor:pointer"></i>
+                <i class="fa-regular fa-heart heart" style="font-size: 20px; margin-right: 20px; cursor: pointer"></i>
+                <i class="fa-regular fa-comment comment" style="font-size:20px; cursor: pointer;"></i>
+            </div>
+        </div>
     </div>
     <div class="mobilesite">
         <img src="Dualapp.png" style="width:100%"/>
@@ -358,6 +383,27 @@
                 comment.classList.remove("active");
             }, 1000);
         });
+
+        const btnScrollToTop = document.querySelector(".backtotop");
+
+        btnScrollToTop.addEventListener("click", e => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+        });
+
+        window.addEventListener('scroll', e => {
+            if (window.scrollY > 800) {
+                btnScrollToTop.classList.add("fadeelementin");
+                btnScrollToTop.classList.remove("fadeelementout");
+            }
+            else {
+                btnScrollToTop.classList.add("fadeelementout");
+                btnScrollToTop.classList.remove("fadeelementin");
+            }
+        });
     </script>
 
     <style>
@@ -377,6 +423,34 @@
             justify-content: center;
             min-height: 100vh;
             background: #000000;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fadeelementin {
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+               opacity:initial;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .fadeelementout {
+            animation: fadeOut 1s forwards;
         }
 
 
@@ -447,6 +521,9 @@
             }
             .wrapper {
                 max-width: 60%;
+            }
+            .backtotop{
+                margin-left:calc(50% - 75px);
             }
         }
 
